@@ -1,0 +1,1 @@
+export const toAbsoluteUrl = (pathname: string) => /*process.env.PUBLIC_URL + pathname*//*import.meta.env.BASE_URL*/document.location.origin + pathname
