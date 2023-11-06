@@ -17,8 +17,10 @@ function App() {
           </span>
         </div>
 
-        <Navbar bg="dark" data-bs-theme="dark" className="">
-          <Container className="d-flex justify-content-center">
+        <Navbar bg="dark" data-bs-theme="dark" className="" expand='lg'>
+          <Container className="d-flex  justify-content-end">
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="">
               <Nav.Link href="#aboutme" className="title fw-bolder">
                 Sobre mi
@@ -29,22 +31,26 @@ function App() {
               <Nav.Link href="#cv" className="title fw-bolder">
                 Curriculum
               </Nav.Link>
+              <Nav.Link href="#links" className="title fw-bolder">
+                Links
+              </Nav.Link>
             </Nav>
+            </Navbar.Collapse>
           </Container>
         </Navbar>
       </header>
-      <main className="container mt-3 border border-danger text-light">
+      <main className="container mt-3 text-light">
         <section id="aboutme">
           <div className="container">
             <article>
               <Row>
                 <Col className="text-center">
-                  <h2 className="h2 title">Sobre mi</h2>
+                  <h2 className="h1 title">Sobre mi</h2>
                 </Col>
               </Row>
               <Row>
                 <Col xs={12} className="text-center">
-                  <p className="">
+                  <p className="fs-3">
                     Soy Alan, un apasionado programador Full Stack con
                     experiencia en tecnologías MERN (MongoDB, Express.js, React
                     y Node.js) y conocimiento de Java. Mi enfoque va más allá
@@ -55,7 +61,7 @@ function App() {
                 </Col>
               </Row>
             </article>
-            <article className="border border-light rounded-4 p-3 mt-5">
+            <article className="p-3 mt-5">
               <Row>
                 <Col className="text-start">
                   <h3 className="h3">Experiencia Laboral</h3>
@@ -141,7 +147,7 @@ function App() {
                 </Col>
               </Row>
             </article>
-            <article className="border border-light rounded-4 p-3 mt-5">
+            <article className="p-3 mt-5">
               <Row>
                 <Col className="text-start">
                   <h3 className="h3">Educación</h3>
@@ -198,40 +204,228 @@ function App() {
             </article>
           </div>
         </section>
-        <hr />
-        <section id="skills">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-          doloribus veritatis sequi reprehenderit porro natus quas ex doloremque
-          eaque iure error blanditiis asperiores sunt perspiciatis, voluptatum
-          accusantium dolorum quia aliquid! Enim quia nam, natus quaerat quo at,
-          harum minima laudantium error facilis pariatur? Iure dicta eaque
-          consectetur soluta et suscipit obcaecati exercitationem impedit ab
-          beatae aspernatur consequuntur deserunt, alias iste maxime ea nesciunt
-          dolore tempora. Sequi nostrum laborum quia, temporibus repudiandae
-          accusamus quo eum alias officia voluptatum animi vero hic eaque,
-          facilis dolorem facere! Eos excepturi quasi quo nostrum nisi? Debitis
-          eos autem saepe illum ipsum molestiae, excepturi ipsa quis culpa odio
-          corporis tempora earum laudantium temporibus exercitationem ab
-          nesciunt deserunt inventore cum vero corrupti placeat. Quidem
-          dignissimos facere officiis maxime. Exercitationem, sapiente ipsam.
-          Tenetur temporibus alias, porro, labore quis doloribus corporis error
-          officiis veritatis debitis similique! Fugit ex aliquid magni minima
-          deserunt, unde placeat reprehenderit. Quas architecto perspiciatis
-          quisquam.
+        
+        <section id="skills" className="mt-5">
+          <div className="container">
+            <article>
+              <Row>
+                <Col className="text-center">
+                  <h2 className="h1 title">Habilidades</h2>
+                </Col>
+              </Row>
+              <Row className="mt-2">
+                <Col xs={12} md={6}>
+                  <h4 className="mb-3 ">Hard Skills</h4>
+                  <Row>
+                    <Col xs={12} md={6}>
+                      <p className="ms-5 d-flex">
+                        <img
+                          src={toAbsoluteUrl(
+                            "/typescript-svgrepo-com.svg"
+                          )}
+                          width={"32px"}
+                          height={"32px"}
+                        />
+                        <p className="pt-1 ms-1" style={{ height: 32 }}>
+                          Typescript
+                        </p>
+                      </p>
+                      <p className="ms-5 d-flex">
+                        <img
+                          src={toAbsoluteUrl(
+                            "/javascript-svgrepo-com.svg"
+                          )}
+                          width={"32px"}
+                          height={"32px"}
+                        />
+                        <p className="pt-1 ms-1" style={{ height: 32 }}>
+                          Javascript
+                        </p>
+                      </p>
+                      <p className="ms-5 d-flex">
+                        <img
+                          src={toAbsoluteUrl("/java-svgrepo-com.svg")}
+                          width={"32px"}
+                          height={"32px"}
+                        />
+                        <p className="pt-1 ms-1" style={{ height: 32 }}>
+                          Java
+                        </p>
+                      </p>
+                      <p className="ms-5 d-flex">
+                        <img
+                          src={toAbsoluteUrl("/react-svgrepo-com.svg")}
+                          width={"32px"}
+                          height={"32px"}
+                        />
+                        <p className="pt-1 ms-1" style={{ height: 32 }}>
+                          React
+                        </p>
+                      </p>
+                      <p className="ms-5 d-flex">
+                        <img
+                          src={toAbsoluteUrl("/vite-svgrepo-com.svg")}
+                          width={"32px"}
+                          height={"32px"}
+                        />
+                        <p className="pt-1 ms-1" style={{ height: 32 }}>
+                          Vite
+                        </p>
+                      </p>
+                      <p className="ms-5 d-flex">
+                        <img
+                          src={toAbsoluteUrl(
+                            "/jest-snapshot-svgrepo-com.svg"
+                          )}
+                          width={"32px"}
+                          height={"32px"}
+                        />
+                        <p className="pt-1 ms-1" style={{ height: 32 }}>
+                          Jest
+                        </p>
+                      </p>
+                      <p className="ms-5 d-flex">
+                        <img
+                          src={toAbsoluteUrl(
+                            "/socket-io-svgrepo-com.svg"
+                          )}
+                          width={"32px"}
+                          height={"32px"}
+                          className="bg-light rounded-4 p-1"
+                        />
+                        <p className="pt-1 ms-1" style={{ height: 32 }}>
+                          Socket IO
+                        </p>
+                      </p>
+                      <p className="ms-5 d-flex">
+                        <img
+                          src={toAbsoluteUrl("/docker-svgrepo-com.svg")}
+                          width={"32px"}
+                          height={"32px"}
+                        />
+                        <p className="pt-1 ms-1" style={{ height: 32 }}>
+                          Docker
+                        </p>
+                      </p>
+                    </Col>
+                    <Col xs={12} md={6}>
+                      <p className="ms-5 d-flex">
+                        <img
+                          src={toAbsoluteUrl("express-svgrepo-com.svg")}
+                          width={"32px"}
+                          height={"32px"}
+                          className="bg-light rounded-4 p-1"
+                        />
+                        <p className="pt-1 ms-1" style={{ height: 32 }}>
+                          Express
+                        </p>
+                      </p>
+                      <p className="ms-5 d-flex">
+                        <img
+                          src={toAbsoluteUrl(
+                            "/google-cloud-svgrepo-com.svg"
+                          )}
+                          width={"32px"}
+                          height={"32px"}
+                        />
+                        <p className="pt-1 ms-1" style={{ height: 32 }}>
+                          Google Cloud Services
+                        </p>
+                      </p>
+                      <p className="ms-5 d-flex">
+                        <img
+                          src={toAbsoluteUrl("/node-svgrepo-com.svg")}
+                          width={"32px"}
+                          height={"32px"}
+                        />
+                        <p className="pt-1 ms-1" style={{ height: 32 }}>
+                          Node.js
+                        </p>
+                      </p>
+                      <p className="ms-5 d-flex">
+                        <img
+                          src={toAbsoluteUrl("/swagger-svgrepo-com.svg")}
+                          width={"32px"}
+                          height={"32px"}
+                        />
+                        <p className="pt-1 ms-1" style={{ height: 32 }}>
+                          Swagger
+                        </p>
+                      </p>
+                      <p className="ms-5 d-flex">
+                        <img
+                          src={toAbsoluteUrl("/mongo-svgrepo-com.svg")}
+                          width={"32px"}
+                          height={"32px"}
+                        />
+                        <p className="pt-1 ms-1" style={{ height: 32 }}>
+                          MongoDB
+                        </p>
+                      </p>
+                      <p className="ms-5 d-flex">
+                        <img
+                          src={toAbsoluteUrl("/mysql-svgrepo-com.svg")}
+                          width={"32px"}
+                          height={"32px"}
+                        />
+                        <p className="pt-1 ms-1" style={{ height: 32 }}>
+                          MySql
+                        </p>
+                      </p>
+                    </Col>
+                  </Row>
+                </Col>
+                <Col xs={12} md={6}>
+                  <h4 className="mb-3">Soft Skills</h4>
+                  <div className="ms-5">
+                    <ul>
+                      <p className="pt-1" style={{ height: 32 }}>
+                        <li>Autodidacta continuo</li>
+                      </p>
+                      <p className="pt-1" style={{ height: 32 }}>
+                        <li>Comunicación efectiva</li>
+                      </p>
+                      <p className="pt-1" style={{ height: 32 }}>
+                        <li>Trabajo en equipo</li>
+                      </p>
+                      <p className="pt-1" style={{ height: 32 }}>
+                        <li>Resolución de problemas</li>
+                      </p>
+                      <p className="pt-1" style={{ height: 32 }}>
+                        <li>Pensamiento critico</li>
+                      </p>
+                      <p className="pt-1" style={{ height: 32 }}>
+                        <li>Adaptabilidad</li>
+                      </p>
+                      <p className="pt-1" style={{ height: 32 }}>
+                        <li>Creatividad</li>
+                      </p>
+                      <p className="pt-1" style={{ height: 32 }}>
+                        <li>Organización</li>
+                      </p>
+                    </ul>
+                  </div>
+                </Col>
+              </Row>
+            </article>
+          </div>
         </section>
-        <hr />
-        <section id="cv" className="container">
+        
+        
+        <section id="cv" className="container mt-3">
           <Row>
             <Col className="text-center">
-              <h2 className="h2 title">Curriculum Vitae</h2>
+              <h2 className="h1 title">Curriculum Vitae</h2>
             </Col>
           </Row>
-          <article className="p-3 mt-5">
+          <article className="p-3">
             <Row>
               <Col xs={12}>
                 <div>
                   <object
-                    data={toAbsoluteUrl("/src/assets/CV - Chibilisco Alan 2023.pdf")}
+                    data={toAbsoluteUrl(
+                      "/src/assets/CV - Chibilisco Alan 2023.pdf"
+                    )}
                     type="application/pdf"
                     width="100%"
                     className="h-cv"
@@ -252,6 +446,23 @@ function App() {
               </Col>
             </Row>
           </article>
+        </section>
+        <section id='links' className="my-3 py-3">
+              <article>
+              <Row className="mb-3">
+                <Col className="text-center">
+                  <h2 className="h1 title">Links</h2>
+                </Col>
+              </Row>
+                <footer className="d-flex justify-content-around">
+                          <a href="https://github.com/alanchibilisco?tab=repositories" target="_blank"><img src={toAbsoluteUrl('/github-142-svgrepo-com.svg')} alt="Github Logo"  width={"50px"}
+                          height={"50px"} className="bg-white rounded-5 p-1"/></a>
+                           <a href="https://www.linkedin.com/in/alan-antonio-chibilisco-0490bb62" target="_blank"><img src={toAbsoluteUrl('/linkedin-svgrepo-com.svg')} alt="LinkedIn Logo"  width={"50px"}
+                          height={"50px"} className="bg-white rounded-5 p-1"/></a>
+                           <a href="mailto:alan.chibilisco@gmail.com" target="_blank"><img src={toAbsoluteUrl('/gmail-svgrepo-com.svg')} alt="Gmail Logo"  width={"50px"}
+                          height={"50px"} className="bg-white rounded-5 p-1"/></a>
+                </footer>
+              </article>
         </section>
       </main>
     </>
