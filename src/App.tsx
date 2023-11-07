@@ -17,24 +17,24 @@ function App() {
           </span>
         </div>
 
-        <Navbar bg="dark" data-bs-theme="dark" className="" expand='lg'>
+        <Navbar bg="dark" data-bs-theme="dark" className="" expand="lg">
           <Container className="d-flex  justify-content-end">
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="">
-              <Nav.Link href="#aboutme" className="title fw-bolder">
-                Sobre mi
-              </Nav.Link>
-              <Nav.Link href="#skills" className="title fw-bolder">
-                Habilidades
-              </Nav.Link>
-              <Nav.Link href="#cv" className="title fw-bolder">
-                Curriculum
-              </Nav.Link>
-              <Nav.Link href="#links" className="title fw-bolder">
-                Links
-              </Nav.Link>
-            </Nav>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="">
+                <Nav.Link href="#aboutme" className="title fw-bolder">
+                  Sobre mi
+                </Nav.Link>
+                <Nav.Link href="#skills" className="title fw-bolder">
+                  Habilidades
+                </Nav.Link>
+                <Nav.Link href="#cv" className="title fw-bolder">
+                  Curriculum
+                </Nav.Link>
+                <Nav.Link href="#links" className="title fw-bolder">
+                  Links
+                </Nav.Link>
+              </Nav>
             </Navbar.Collapse>
           </Container>
         </Navbar>
@@ -157,9 +157,7 @@ function App() {
                 <Col xs={12} md={6}>
                   <div>
                     <object
-                      data={toAbsoluteUrl(
-                        "/src/assets/Certificadosexperto.pdf"
-                      )}
+                      data={toAbsoluteUrl("/Certificadosexperto.pdf")}
                       type="application/pdf"
                       width="100%"
                       className="h-pdf"
@@ -167,9 +165,7 @@ function App() {
                       <p>
                         Tu navegador no puede mostrar este PDF. Puedes{" "}
                         <a
-                          href={toAbsoluteUrl(
-                            "/src/assets/Certificadosexperto.pdf"
-                          )}
+                          href={toAbsoluteUrl("/Certificadosexperto.pdf")}
                           target="_blank"
                         >
                           descargarlo aquí
@@ -181,7 +177,7 @@ function App() {
                 <Col xs={12} md={6}>
                   <div>
                     <object
-                      data={toAbsoluteUrl("/src/assets/RollingCodeSchool.pdf")}
+                      data={toAbsoluteUrl("/RollingCodeSchool.pdf")}
                       type="application/pdf"
                       width="100%"
                       className="h-pdf"
@@ -189,9 +185,7 @@ function App() {
                       <p>
                         Tu navegador no puede mostrar este PDF. Puedes{" "}
                         <a
-                          href={toAbsoluteUrl(
-                            "/src/assets/RollingCodeSchool.pdf"
-                          )}
+                          href={toAbsoluteUrl("/RollingCodeSchool.pdf")}
                           target="_blank"
                         >
                           descargarlo aquí
@@ -204,7 +198,7 @@ function App() {
             </article>
           </div>
         </section>
-        
+
         <section id="skills" className="mt-5">
           <div className="container">
             <article>
@@ -213,16 +207,18 @@ function App() {
                   <h2 className="h1 title">Habilidades</h2>
                 </Col>
               </Row>
-              <Row className="mt-2">
-                <Col xs={12} md={6}>
-                  <h4 className="mb-3 ">Hard Skills</h4>
+              <Row className="mt-5">
+                <Col xs={12} md={12}>
+                  <h4 className="mb-3 text-center">Hard Skills</h4>
                   <Row>
-                    <Col xs={12} md={6}>
+                    <Col
+                      xs={12}
+                      md={6}
+                      className="d-md-flex flex-md-column align-items-md-center"
+                    >
                       <p className="ms-5 d-flex">
                         <img
-                          src={toAbsoluteUrl(
-                            "/typescript-svgrepo-com.svg"
-                          )}
+                          src={toAbsoluteUrl("/typescript-svgrepo-com.svg")}
                           width={"32px"}
                           height={"32px"}
                         />
@@ -232,9 +228,7 @@ function App() {
                       </p>
                       <p className="ms-5 d-flex">
                         <img
-                          src={toAbsoluteUrl(
-                            "/javascript-svgrepo-com.svg"
-                          )}
+                          src={toAbsoluteUrl("/javascript-svgrepo-com.svg")}
                           width={"32px"}
                           height={"32px"}
                         />
@@ -274,9 +268,7 @@ function App() {
                       </p>
                       <p className="ms-5 d-flex">
                         <img
-                          src={toAbsoluteUrl(
-                            "/jest-snapshot-svgrepo-com.svg"
-                          )}
+                          src={toAbsoluteUrl("/jest-snapshot-svgrepo-com.svg")}
                           width={"32px"}
                           height={"32px"}
                         />
@@ -286,9 +278,7 @@ function App() {
                       </p>
                       <p className="ms-5 d-flex">
                         <img
-                          src={toAbsoluteUrl(
-                            "/socket-io-svgrepo-com.svg"
-                          )}
+                          src={toAbsoluteUrl("/socket-io-svgrepo-com.svg")}
                           width={"32px"}
                           height={"32px"}
                           className="bg-light rounded-4 p-1"
@@ -308,10 +298,10 @@ function App() {
                         </p>
                       </p>
                     </Col>
-                    <Col xs={12} md={6}>
+                    <Col xs={12} md={6} className="d-md-flex flex-md-column align-items-md-center">
                       <p className="ms-5 d-flex">
                         <img
-                          src={toAbsoluteUrl("express-svgrepo-com.svg")}
+                          src={toAbsoluteUrl("/express-svgrepo-com.svg")}
                           width={"32px"}
                           height={"32px"}
                           className="bg-light rounded-4 p-1"
@@ -322,9 +312,7 @@ function App() {
                       </p>
                       <p className="ms-5 d-flex">
                         <img
-                          src={toAbsoluteUrl(
-                            "/google-cloud-svgrepo-com.svg"
-                          )}
+                          src={toAbsoluteUrl("/google-cloud-svgrepo-com.svg")}
                           width={"32px"}
                           height={"32px"}
                         />
@@ -375,7 +363,13 @@ function App() {
                     </Col>
                   </Row>
                 </Col>
-                <Col xs={12} md={6}>
+              </Row>
+              <Row className="mt-5">
+                <Col
+                  xs={12}
+                  md={12}
+                  className="d-md-flex flex-md-column align-items-md-center"
+                >
                   <h4 className="mb-3">Soft Skills</h4>
                   <div className="ms-5">
                     <ul>
@@ -410,9 +404,8 @@ function App() {
             </article>
           </div>
         </section>
-        
-        
-        <section id="cv" className="container mt-3">
+
+        <section id="cv" className="container mt-5">
           <Row>
             <Col className="text-center">
               <h2 className="h1 title">Curriculum Vitae</h2>
@@ -423,9 +416,7 @@ function App() {
               <Col xs={12}>
                 <div>
                   <object
-                    data={toAbsoluteUrl(
-                      "/src/assets/CV - Chibilisco Alan 2023.pdf"
-                    )}
+                    data={toAbsoluteUrl("/CV - Chibilisco Alan 2023.pdf")}
                     type="application/pdf"
                     width="100%"
                     className="h-cv"
@@ -433,9 +424,7 @@ function App() {
                     <p>
                       Tu navegador no puede mostrar este PDF. Puedes{" "}
                       <a
-                        href={toAbsoluteUrl(
-                          "/src/assets/CV - Chibilisco Alan 2023.pdf"
-                        )}
+                        href={toAbsoluteUrl("/CV - Chibilisco Alan 2023.pdf")}
                         target="_blank"
                       >
                         descargarlo aquí
@@ -447,22 +436,49 @@ function App() {
             </Row>
           </article>
         </section>
-        <section id='links' className="my-3 py-3">
-              <article>
-              <Row className="mb-3">
-                <Col className="text-center">
-                  <h2 className="h1 title">Links</h2>
-                </Col>
-              </Row>
-                <footer className="d-flex justify-content-around">
-                          <a href="https://github.com/alanchibilisco?tab=repositories" target="_blank"><img src={toAbsoluteUrl('/github-142-svgrepo-com.svg')} alt="Github Logo"  width={"50px"}
-                          height={"50px"} className="bg-white rounded-5 p-1"/></a>
-                           <a href="https://www.linkedin.com/in/alan-antonio-chibilisco-0490bb62" target="_blank"><img src={toAbsoluteUrl('/linkedin-svgrepo-com.svg')} alt="LinkedIn Logo"  width={"50px"}
-                          height={"50px"} className="bg-white rounded-5 p-1"/></a>
-                           <a href="mailto:alan.chibilisco@gmail.com" target="_blank"><img src={toAbsoluteUrl('/gmail-svgrepo-com.svg')} alt="Gmail Logo"  width={"50px"}
-                          height={"50px"} className="bg-white rounded-5 p-1"/></a>
-                </footer>
-              </article>
+        <section id="links" className="my-5 py-3">
+          <article>
+            <Row className="mb-3">
+              <Col className="text-center">
+                <h2 className="h1 title">Links</h2>
+              </Col>
+            </Row>
+            <footer className="d-flex justify-content-around mt-5">
+              <a
+                href="https://github.com/alanchibilisco?tab=repositories"
+                target="_blank"
+              >
+                <img
+                  src={toAbsoluteUrl("/github-142-svgrepo-com.svg")}
+                  alt="Github Logo"
+                  width={"50px"}
+                  height={"50px"}
+                  className="bg-white rounded-5 p-1"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/alan-antonio-chibilisco-0490bb62"
+                target="_blank"
+              >
+                <img
+                  src={toAbsoluteUrl("/linkedin-svgrepo-com.svg")}
+                  alt="LinkedIn Logo"
+                  width={"50px"}
+                  height={"50px"}
+                  className="bg-white rounded-5 p-1"
+                />
+              </a>
+              <a href="mailto:alan.chibilisco@gmail.com" target="_blank">
+                <img
+                  src={toAbsoluteUrl("/gmail-svgrepo-com.svg")}
+                  alt="Gmail Logo"
+                  width={"50px"}
+                  height={"50px"}
+                  className="bg-white rounded-5 p-1"
+                />
+              </a>
+            </footer>
+          </article>
         </section>
       </main>
     </>
